@@ -1,0 +1,30 @@
+initial amount <input id="amount" type="number"></input>
+<br>
+percentage <input id="percentage" type="number"></input>
+<select id="rate">
+    <option value="1">%/day</option>
+<!--<option value="7">/week</option>
+    <option value="30">/month</option>-->
+    <option value="365">%/year</option>
+</select>
+<br>
+will last <input id="howlong" type="number"></input>
+<select id="duration">
+    <option value="1">days</option>
+<!--<option value="7">weeks</option>
+    <option value="30">months</option>-->
+    <option value="365">years</option>
+</select>
+<br>
+renews every <input id="renew" type="number"></input>
+<select id="renew_unit">
+    <option value="1">days</option>
+<!--<option value="7">weeks</option>
+    <option value="30">months</option>-->
+    <option value="365">years</option>
+</select>
+<br>
+<button id="submit">Calculate</button>
+<br>
+Final amount: <b id="result">result</b>
+<script src="script.js"></script>
