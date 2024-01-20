@@ -1,11 +1,9 @@
-function calc(amount, percentage, percentage_rate, duration, renew){
+function calc(amount, percentage, percentage_days, duration, renew){
     if (renew > duration){
         return 'Renew rate should be the same or lower than total duration :)';
     }
     let iterations = duration / renew;
-    let iteration_percentage = percentage / (percentage_rate / renew);
-    console.log('iterations: ', iterations);
-    console.log('iteration_percentage: ', iteration_percentage);
+    let iteration_percentage = percentage / (percentage_days / renew);
     for (let i = 0; i < iterations; i++){
         amount = amount + ((iteration_percentage * amount) / 100);
     }
