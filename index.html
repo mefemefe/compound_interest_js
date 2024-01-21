@@ -6,47 +6,47 @@
     <title>Compound Interest</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="grid place-content-center">
-    <div>
-        Initial amount <input id="amount" type="number" class="py-1 border rounded-xl"></input>
-    </div>
-    <br>
-    <div>
-        Percentage <input id="percentage" type="number" class="py-1 border rounded-xl"></input>
-        <select id="rate" class="border">
-            <option value="1">%/day</option>
-        <!--<option value="7">/week</option>
-            <option value="30">/month</option>-->
-            <option value="365">%/year</option>
-        </select>
-    </div>
-    <br>
-    <div>
-        Will last <input id="howlong" type="number" class="py-1 border rounded-xl"></input>
-        <select id="duration" class="border">
-            <option value="1">days</option>
-            <!--<option value="7">weeks</option>
-            <option value="30">months</option>-->
-            <option value="365">years</option>
-        </select>
-    </div>
-    <br>
-    <div>
-        Renews every <input id="renew" type="number" class="py-1 border rounded-xl"></input>
-        <select id="renew_unit" class="border">
-            <option value="1">days</option>
-        <!--<option value="7">weeks</option>
-            <option value="30">months</option>-->
-            <option value="365">years</option>
-        </select>
-    </div>
-    <br>
-    <div class="grid place-content-center">
-        <button id="submit" class="rounded-xl border py-2 px-4 bg-blue-200 hover:bg-blue-400 active:bg-blue-200  mx">Calculate</button>
-    </div>
-    <br>
-    <div class="grid place-content-center text-xl">
-        Final amount: <b id="result" class="grid place-content-center px-4 text-5xl">result</b>
+<body class="grid place-content-center h-screen">
+    <div class="bg-blue-50 p-10 rounded-xl shadow-md">
+        <div class="text-center">
+            Initial amount <input id="amount" type="number" class="py-1 border rounded-xl text-right w-22" value="100"></input>
+        </div>
+        <br>
+        <div class="text-center">
+            Percentage <input id="percentage" type="number" class="py-1 border rounded-xl text-right w-20" value="10"></input>
+            <select id="rate" class="border">
+                <option value="365">%/year</option>
+                <option value="1">%/day</option>
+            </select>
+        </div>
+        <br>
+        <div class="text-center">
+            Will last <input id="howlong" type="number" class="py-1 border rounded-xl text-right w-20" value="30"></input>
+            <select id="duration" class="border">
+                <option value="1">days</option>
+                <option value="365">years</option>
+            </select>
+        </div>
+        <br>
+        <div class="text-center">
+            Renews every <input id="renew" type="number" class="py-1 border rounded-xl text-right w-20" value="30"></input>
+            <select id="renew_unit" class="border">
+                <option value="1">days</option>
+                <option value="365">years</option>
+            </select>
+        </div>
+        <br>
+        <div class="grid place-content-center">
+            <button id="submit" class="rounded-xl border py-2 px-4 bg-blue-300 hover:bg-blue-400 active:bg-blue-200  mx">Calculate</button>
+        </div>
+        <br>
+        <div class="text-3xl">
+            Final amount: <b id="result" class="grid place-content-center px-4 text-5xl">result</b>
+        </div>
+        <br>
+        <div class="text-3xl">
+            Interest: <b id="interest" class="grid place-content-center px-4 text-5xl">result</b>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
